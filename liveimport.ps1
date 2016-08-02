@@ -54,7 +54,7 @@ while (! $vimServer) {
 }
 Write-Host "vCenter $vcenter selected." 
 
-# If not already connected to this vCenter attempt connection (prompting for credentials if needed):
+# If not already connected to this vCenter attempt connection:
 if (!$vc.IsConnected) {
     try {
         $vc = Connect-VIServer -Server $vcenter -Credential $credentials -ErrorAction Stop
